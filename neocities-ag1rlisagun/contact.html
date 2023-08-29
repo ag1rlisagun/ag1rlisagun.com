@@ -25,6 +25,9 @@
 
         body {
             display: grid;
+            background-repeat: no-repeat;
+            background-image: url(images/abfb361e405a15980f0a0f65b2273443.jpg);
+            background-size: 1920px 1029px;
             place-items: center;
             font-smooth: never !important;
             -webkit-font-smoothing: none !important;
@@ -34,6 +37,7 @@
         #page {
             display: grid;
             place-items: center;
+            text-align: center;
             width: 40%;
             margin-top: 100px;
             grid-template-areas:
@@ -44,6 +48,7 @@
 
         #page > main {
             grid-area: main;
+            background-color: rgba(255,255,255,0.8);
             border: black 1px solid;
             height: 400px;
             width: 400px;
@@ -55,6 +60,7 @@
 
         #page > nav {
             grid-area: nav;
+            background-color: rgba(255,255,255,0.8);
             border: black 1px solid;
             height: 15px;
             width: 100px;
