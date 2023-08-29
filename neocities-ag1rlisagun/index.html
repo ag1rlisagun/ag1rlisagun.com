@@ -79,6 +79,53 @@
             margin: 0;
             padding: 0;
         }
+        
+        .example1 {
+  height: 50px; 
+  overflow: hidden;
+  position: relative;
+}
+        
+.example1 h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+
+    /* Starting position */
+       -moz-transform:translateX(100%);
+       -webkit-transform:translateX(100%);  
+       transform:translateX(100%);
+
+ /* Apply animation to this element */  
+       -moz-animation: example1 5s linear infinite;
+       -webkit-animation: example1 5s linear infinite;
+       animation: example1 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+      @-moz-keyframes example1 {
+       0%   { -moz-transform: translateX(100%); }
+       100% { -moz-transform: translateX(-100%); }
+      }
+      @-webkit-keyframes example1 {
+       0%   { -webkit-transform: translateX(100%); }
+       100% { -webkit-transform: translateX(-100%); }
+      }
+      @keyframes example1 {
+       0%   { 
+       -moz-transform: translateX(100%); /* Firefox bug fix */
+       -webkit-transform: translateX(100%); /* Firefox bug fix */
+       transform: translateX(100%);         
+       }
+       100% { 
+       -moz-transform: translateX(-100%); /* Firefox bug fix */
+       -webkit-transform: translateX(-100%); /* Firefox bug fix */
+       transform: translateX(-100%); 
+       }
+      }
     </style>
 
     <!--elements -->
@@ -130,7 +177,11 @@
                     08/29/2023: finally settled with a structure to work with for the website
                 </p>
             </updates>
-            <footer></footer>
+            <footer>
+            <div class="example1">
+                <h3>This will be filled with awesome cool graphics... </h3>
+                </div>
+            </footer>
         </section>
     </body>
 </html>
