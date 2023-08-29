@@ -15,16 +15,22 @@
 
     <!-- style/css -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+        
         html {
-            font-family: MS Gothic;
-            text-align: center;
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 16px;
+            
         }
 
         body {
             display: grid;
             place-items: center;
+            font-smooth: never !important;
+            -webkit-font-smoothing: none !important;
+            -webkit-text-stroke: none !important;
         }
-
+        
         #page {
             display: grid;
             place-items: center;
