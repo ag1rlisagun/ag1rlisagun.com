@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <!--metadata -->
+    <head>
+        <title>ag1rlisagun</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="shortcut icon"
+            type="image/jpg"
+            href="images/profilePic.jpg" />
+    </head>
+
+    <!-- style/css -->
+    <style>
+        html {
+            font-family: MS Gothic;
+            text-align: center;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+        }
+
+        #page {
+            display: grid;
+            place-items: center;
+            width: 40%;
+            margin-top: 100px;
+            grid-template-areas:
+                "main nav"
+                "main  updates"
+                "footer  footer";
+        }
+
+        #page > main {
+            grid-area: main;
+            border: black 1px solid;
+            height: 400px;
+            width: 400px;
+            padding: 10px;
+            margin: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        #page > nav {
+            grid-area: nav;
+            border: black 1px solid;
+            height: 15px;
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #page > updates {
+            grid-area: updates;
+            border: black 1px solid;
+            height: 180px;
+            width: 150px;
+            padding: 10px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin: 10px;
+        }
+
+        #page > footer {
+            grid-area: footer;
+            border: black 1px solid;
+            height: 30px;
+            width: 610px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <!--elements -->
+    <body>
+        <section id="page">
+            <main>My Games</main>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Go Home</a></li>
+                </ul>
+            </nav>
+        </section>
+    </body>
+</html>
