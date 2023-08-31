@@ -22,10 +22,13 @@
 
         body {
             display: grid;
-            background-repeat: no-repeat;
-            background-image: url(images/abfb361e405a15980f0a0f65b2273443.jpg);
-            background-size: 1920px 1029px;
-            place-items: center;
+            place-content: center;
+            /*background-repeat: no-repeat;*/
+            background-image: url(images/greengrass.png);
+            background-size:auto;
+            width: -moz-fit-content; /* For Mozilla firefox*/
+            width: -webkit-fit-content; /* For Google Chrome */
+            width: fit-content;
             font-smooth: never !important;
             -webkit-font-smoothing: none !important;
             -webkit-text-stroke: none !important;
@@ -33,10 +36,19 @@
 
         #page {
             display: grid;
-            grid-gap: 0px;
+            place-content: center;
+            /*grid-template-columns: 1fr;
+            grid-template-rows: 10vh;*/
+            grid-gap: 10px;
             text-align: center;
-            width: 30%;
-            margin-top: 80px;
+            justify-content: center;
+            /*width: 40%;*/
+            width: -moz-fit-content; /* For Mozilla firefox*/
+            width: -webkit-fit-content; /* For Google Chrome */
+            width: fit-content;
+            margin-top: 150px;
+            margin-left: 590px;
+            margin-right: 590px;
             grid-template-areas:
                 "main nav"
                 "main  updates"
@@ -45,12 +57,17 @@
 
         #page > main {
             grid-area: main;
+            /*justify-content: center;
+            align-content: center;*/
             background-color: rgba(255,255,255,0.8);
             border: black 1px solid;
             height: auto;
             width: auto;
             padding: 10px;
-            margin: 10px;
+            /*padding: 10px;
+            margin: 10px;*/
+            /*align-self: center;
+            justify-self: center;*/
         }
 
         #page > nav {
@@ -58,21 +75,23 @@
             background-color:rgba(255,255,255,0.8);
             border: black 1px solid;
             height: auto;
-            width: auto;
+            width: 100%;
             padding: 10px;
-            margin: 10px;
+            /*padding: 10px;
+            margin: 10px;*/
         }
 
         #page > updates {
             grid-area: updates;
             background-color: rgba(255,255,255,0.8);
             border: black 1px solid;
-            max-height: 150px;
-            width: auto;
+            max-height: 175px;
+            width: 100%;
             padding: 10px;
+            /*padding: 10px;*/
             overflow-x: hidden;
             overflow-y: scroll;
-            margin: 10px;
+            /*margin: 10px;*/
         }
 
         #page > footer {
@@ -80,9 +99,10 @@
             background-color: rgba(255,255,255,0.8);
             border: black 1px solid;
             height: auto;
-            width: auto;
+            width: 100%;
             padding: 10px;
-            margin: 10px;
+            /*padding: 10px;
+            margin: 10px;*/
         }
 
         ul {
@@ -141,7 +161,7 @@
 
     <!--elements -->
     <body>
-        <section id="page">
+        <section id="page"> <center></center>
             <main>Home
                 <br />
                 <br />
