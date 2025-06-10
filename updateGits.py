@@ -20,7 +20,7 @@ for word in commandArg:
         message += word + "\"" # end the message
 
 # commit and push changes to main github
-os.system("git remote set-url origin https://github.com/ag1rlisagun/ag1rlisagun.com.git")
+os.system("git remote set-url origin https://github.com/ag1rlisagun.com.git")
 os.system("git pull")
 os.system("git status")
 os.system("git add .")
