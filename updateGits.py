@@ -35,17 +35,21 @@ os.system("git push")
 os.chdir("..")
 print("Current Directory: ", os.getcwd())
 
-subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org"])
+subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org/ag1rlisagun/site"])
 
 # push changes to nekogit repo
-os.chdir(r"ag1rlisagun.nekoweb.org/")
+os.chdir(r"ag1rlisagun.nekoweb.org/ag1rlisagun/")
 print("Current Directory: ", os.getcwd())
 
 os.system("git remote set-url origin https://git.nekoweb.org/ag1rlisagun.git")
 os.system("git remote -v")
 os.system("git status")
-os.system("git pull --allow-unrelated-histories")
+
+os.chdir(r"site/")
+os.system("git pull")
+os.system("rm -rf .git")
+
 os.system("git add .")
 os.system("git commit -m {0}".format(message))
-os.system("git push --set-upstream origin main")
+os.system("git push") # --set-upstream origin main")
 
