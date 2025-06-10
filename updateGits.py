@@ -1,5 +1,6 @@
 import os
 import sys
+import subprocess
 
 # script to push changes to main repo, 
 # then update the repo folder for nekogit then push changes there too
@@ -13,7 +14,6 @@ message = "\"" # add start quotation mark for commit message
 
 # create a string for the commit message out of the commandline arguments
 for word in commandArg:
-    print(word)
     if commandArg.index(word) != len(commandArg) - 1:
         message += word + " "
     else:
@@ -28,7 +28,8 @@ os.system("git push")
 
 # update nekogit repo folder
 os.chdir("..")
-os.system("rsync -vaP --delete ag1rlisagun.com/ ../nekogit/ag1rlisagun")
+output = subprocess.Popen(["rsync", "-vaP", "--delete", "ag1rlisagun.com/", "../nekogit/ag1rlisagun"])
+print(output)
 
 # push changes to nekogit repo
 os.chdir("nekogit/ag1rlisagun")
