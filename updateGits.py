@@ -28,16 +28,16 @@ os.system("git commit -m {0}".format(message))
 os.system("git push")
 
 # update nekogit repo folder
-os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite")
+os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite")
 subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org"])
 
 # push changes to nekogit repo
-os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org")
+os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org")
 os.system("git remote -v")
 os.system("git status")
 os.system("git pull")
 os.system("git add .")
 os.system("git commit -m {0}".format(message))
 os.system("git push --set-upstream origin main")
-os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite")
+os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite")
 
