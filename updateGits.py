@@ -27,12 +27,12 @@ os.system("git commit -m {0}".format(message))
 os.system("git push")
 
 # update nekogit repo folder
-os.system("cd ..")
+os.chdir("..")
 os.system("rsync -vaP --delete ag1rlisagun.com/ ../nekogit/ag1rlisagun")
 
 # push changes to nekogit repo
-os.system("cd nekogit/ag1rlisagun")
+os.chdir("nekogit/ag1rlisagun")
 os.system("git status")
 os.system("git push -u origin main")
-os.system("cd ../../")
+os.chdir("../../")
 
