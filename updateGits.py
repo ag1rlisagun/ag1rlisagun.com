@@ -27,12 +27,12 @@ os.system("git commit -m {0}".format(message))
 os.system("git push")
 
 # update nekogit repo folder
-os.chdir("..")
-subprocess.call(["rsync", "-vaPR", "--delete", "/ag1rlisagun.com/", "../nekogit/ag1rlisagun"])
+os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite")
+subprocess.call(["rsync", "-vaPR", "--delete", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/nekogit/ag1rlisagun"])
 
 # push changes to nekogit repo
-os.chdir("../nekogit/ag1rlisagun")
+os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite/nekogit/ag1rlisagun")
 os.system("git status")
 os.system("git push -u origin main")
-os.chdir("../../")
+os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite")
 
