@@ -28,8 +28,7 @@ os.system("git push")
 
 # update nekogit repo folder
 os.chdir("..")
-output = subprocess.Popen(["rsync", "-vaP", "--delete", "ag1rlisagun.com/", "../nekogit/ag1rlisagun"])
-print(output)
+subprocess.call(["rsync", "-vaPR", "--delete", "/ag1rlisagun.com/", "../nekogit/ag1rlisagun"])
 
 # push changes to nekogit repo
 os.chdir("../nekogit/ag1rlisagun")
