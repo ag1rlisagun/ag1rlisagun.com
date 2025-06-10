@@ -32,7 +32,7 @@ output = subprocess.Popen(["rsync", "-vaP", "--delete", "ag1rlisagun.com/", "../
 print(output)
 
 # push changes to nekogit repo
-os.chdir("nekogit/ag1rlisagun")
+os.chdir("../nekogit/ag1rlisagun")
 os.system("git status")
 os.system("git push -u origin main")
 os.chdir("../../")
