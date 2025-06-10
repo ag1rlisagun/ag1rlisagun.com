@@ -19,6 +19,9 @@ for word in commandArg:
     else:
         message += word + "\"" # end the message
 
+os.chdir("/users/aaliyahwusu/documents/projects/ag1rlisasite/ag1rlisagun.com")
+print("Current Directory: ", os.getcwd())
+
 # commit and push changes to main github
 os.system("git remote -v")
 os.system("git status")
@@ -28,16 +31,17 @@ os.system("git commit -m {0}".format(message))
 os.system("git push")
 
 # update nekogit repo folder
-os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite")
+os.chdir("..")
+print("Current Directory: ", os.getcwd())
 subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org"])
 
 # push changes to nekogit repo
-os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org")
+os.chdir("ag1rlisagun.nekoweb.org")
+print("Current Directory: ", os.getcwd())
 os.system("git remote -v")
 os.system("git status")
 os.system("git pull")
 os.system("git add .")
 os.system("git commit -m {0}".format(message))
 os.system("git push --set-upstream origin main")
-os.chdir(r"/users/aaliyahwusu/documents/projects/ag1rlisasite")
 
