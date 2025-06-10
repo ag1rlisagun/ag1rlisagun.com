@@ -23,6 +23,7 @@ os.chdir("/users/aaliyahwusu/documents/projects/ag1rlisasite/ag1rlisagun.com")
 print("Current Directory: ", os.getcwd())
 
 # commit and push changes to main github
+os.system("git remote set-url origin https://github.com/ag1rlisagun/ag1rlisagun.com")
 os.system("git remote -v")
 os.system("git status")
 os.system("git pull")
@@ -33,11 +34,14 @@ os.system("git push")
 # update nekogit repo folder
 os.chdir("..")
 print("Current Directory: ", os.getcwd())
+
 subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org"])
 
 # push changes to nekogit repo
 os.chdir(r"ag1rlisagun.nekoweb.org/")
 print("Current Directory: ", os.getcwd())
+
+os.system("git remote set-url origin https://git.nekoweb.org/ag1rlisagun.git")
 os.system("git remote -v")
 os.system("git status")
 os.system("git pull")
