@@ -36,7 +36,7 @@ print("Current Directory: ", os.getcwd())
 subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Documents/projects/ag1rlisasite/ag1rlisagun.nekoweb.org"])
 
 # push changes to nekogit repo
-os.chdir("ag1rlisagun.nekoweb.org")
+os.chdir(r"ag1rlisagun.nekoweb.org/")
 print("Current Directory: ", os.getcwd())
 os.system("git remote -v")
 os.system("git status")
