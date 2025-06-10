@@ -21,6 +21,7 @@ for word in commandArg:
 
 # commit and push changes to main github
 os.system("git remote set-url origin https://github.com/ag1rlisagun/ag1rlisagun.com.git")
+os.system("git pull")
 os.system("git status")
 os.system("git add .")
 os.system("git status")
@@ -33,7 +34,8 @@ subprocess.call(["rsync", "-varP", "ag1rlisagun.com/", "/Users/aaliyahwusu/Docum
 
 # push changes to nekogit repo
 os.chdir("/Users/aaliyahwusu/Documents/projects/ag1rlisasite/nekogit/ag1rlisagun")
-os.system("git remote set-url origin https://git.nekoweb.org/ag1rlisagun/ag1rlisagun.git")
+os.system("git remote set-url origin https://git.nekoweb.org/ag1rlisagun.git")
+os.system("git pull")
 os.system("git status")
 os.system("git add .")
 os.system("git status")
